@@ -13,29 +13,21 @@ body {
     padding: 40px 20px;
 }
 
-/* CONTAINER */
+/* CONTAINER (ALINHA TUDO IGUAL) */
 .container {
     max-width: 800px;
-    margin: auto;
-    padding: 10px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
-/* TITULO PRINCIPAL */
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #d63384;
-}
-
-/* BOTÃO CRIAR */
+/* BOTÃO CRIAR (ALINHADO COM CARD) */
 .criar {
     display: inline-block;
-    margin-bottom: 25px;
-    margin-left: 10px;
+    margin-bottom: 30px;
     background: linear-gradient(135deg, #ff4d8d, #e60073);
     color: white;
     font-weight: bold;
-    padding: 10px 18px;
+    padding: 12px 20px;
     border-radius: 10px;
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(230, 0, 115, 0.3);
@@ -46,7 +38,7 @@ h1 {
     background: linear-gradient(135deg, #e60073, #cc005f);
 }
 
-/* CARD */
+/* CARD (AGORA ALINHADO COM BOTÃO) */
 .card {
     background: #fff0f6;
     border: 1px solid #ffc2d1;
@@ -56,48 +48,42 @@ h1 {
     box-shadow: 0 4px 10px rgba(214, 51, 132, 0.1);
 }
 
-/* TITULO DO POST */
+/* TITULO */
 .card h2 {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 15px;
     color: #c2185b;
 }
 
 /* TEXTO */
 .card p {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-size: 16px;
 }
 
 /* AUTOR */
 .card span {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 13px;
     color: #777;
 }
 
-/* AÇÕES */
+/* AÇÕES (BOTÕES RETOS E ALINHADOS) */
 .actions {
-    margin-top: 15px;
     display: flex;
-    align-items: center;
     gap: 12px;
 }
 
-/* FORM DELETE (CORRIGIDO SEM QUEBRAR LAYOUT) */
+/* REMOVE BUG DO FORM DELETE */
 .delete-form {
-    background: transparent;
-    border: none;
-    padding: 0;
     margin: 0;
-    display: flex;
-    align-items: center;
 }
 
-/* BOTÕES GERAIS */
-.btn, button {
-    display: inline-block;
-    padding: 10px 16px;
+/* BOTÕES */
+.btn,
+button {
+    padding: 10px 18px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
@@ -125,7 +111,7 @@ h1 {
     background: #99003d;
 }
 
-/* FORMULÁRIOS (create/edit) */
+/* FORMULÁRIOS */
 form {
     background: #fff0f6;
     padding: 25px;
@@ -144,7 +130,6 @@ input {
     border-radius: 8px;
     border: 1px solid #ffb3c6;
     outline: none;
-    font-size: 14px;
 }
 
 input:focus {
