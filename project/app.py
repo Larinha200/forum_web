@@ -56,7 +56,7 @@ async def create_page(request: Request):
 async def create_post(request: Request):
     form = await request.form()
     novo_post = {
-        "id":form.get("id"),
+        "id": int(form.get("id")),
         "titulo": form.get("titulo"),
         "resumo": form.get("resumo"),
         "conteudo": form.get("conteudo"),
