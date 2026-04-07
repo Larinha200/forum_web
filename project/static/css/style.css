@@ -52,74 +52,41 @@ h1 {
 }
 
 /* AÇÕES */
+/* AÇÕES (corrigido) */
 .actions {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
-/* BOTÕES */
-.btn, button {
-    background: #ff4d8d;
-    color: white;
-    padding: 8px 12px;
-    border: none;
+/* FORM DE EXCLUIR */
+.delete-form {
+    margin: 0;
+}
+
+/* BOTÕES PADRÃO */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
     border-radius: 8px;
-    cursor: pointer;
     text-decoration: none;
-    transition: 0.3s;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-.btn:hover, button:hover {
-    background: #e6005c;
-}
-
-/* BOTÕES ESPECÍFICOS */
-.criar {
-    background: #ff66a3;
-}
-
+/* ESPECÍFICOS */
 .editar {
-    background: #ff3385;
+    background: #ff4d8d;
 }
 
 .excluir {
     background: #cc0052;
 }
 
-/* FORMULÁRIOS */
-form {
-    background: #fff0f6;
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 400px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: 1px solid #ffc2d1;
-}
-
-/* INPUTS */
-input {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ffb3c6;
-    outline: none;
-}
-
-input:focus {
-    border-color: #ff4d8d;
-    box-shadow: 0 0 5px rgba(255, 77, 141, 0.5);
-}
-
-/* BOTÃO FORM */
-form button {
-    margin-top: 10px;
-}
-
-/* LINK CRIAR */
-a.criar {
-    display: inline-block;
-    margin-bottom: 20px;
+/* REMOVE TAMANHO ESTRANHO */
+button {
+    width: auto;
 }

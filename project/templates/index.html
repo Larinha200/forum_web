@@ -16,14 +16,14 @@
 
     {% for post in posts %}
     <div class="card">
-        <h1>{{ post.titulo }}</h1>
+        <h2>{{ post.titulo }}</h2>
         <p>{{ post.resumo }}</p>
         <span>{{ post.autor }}</span>
 
         <div class="actions">
             <a href="/edit/{{ post.id }}" class="btn editar">Editar</a>
 
-            <form action="/delete/{{ post.id }}" method="post">
+            <form action="/delete/{{ post.id }}" method="post" class="delete-form">
                 <button type="submit" class="btn excluir">Excluir</button>
             </form>
         </div>
