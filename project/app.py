@@ -42,7 +42,7 @@ async def read_item(request: Request, id: int):
     return templates.TemplateResponse(
     request=request,
     name="ver.html",
-    context={"post": [post_encontrado]}
+    context={"post": post_encontrado}
 )
 
 @app.get("/create", response_class=HTMLResponse)

@@ -21,7 +21,7 @@
         <span>{{ post.autor }}</span>
 
         <div class="actions">
-            <a href="/post/{{ post.id }}" >ver</a>
+            <a href="/post/{{ post.id }}" class="btn editar" >ver</a>
             <a href="/edit/{{ post.id }}" class="btn editar">Editar</a>
 
             <form action="/delete/{{ post.id }}" method="post" class="delete-form">
