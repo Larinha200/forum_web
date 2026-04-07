@@ -42,7 +42,7 @@ async def read_item(request: Request, id: int):
     return templates.TemplateResponse(
         request=request,
         name="index.html",
-       context={"post": [post_encontrado]}
+       context={"post": post_encontrado}
     )
 
 @app.get("/create", response_class=HTMLResponse)
@@ -81,7 +81,7 @@ async def create_page(request: Request, id:int):
     return templates.TemplateResponse(
         request=request,
         name="editar_post.html",
-       context={"post": [post_encontrado]}
+       context={"post": post_encontrado}
     )
 
 @app.post("/edit/{id}")
@@ -90,7 +90,7 @@ async def edit_post(request: Request, id: int):
 
     for post in posts:
         if int(post["id"]) == id:
-            post["id"] = id
+            
             post["titulo"] = form.get("titulo")
             post["resumo"] = form.get("resumo")
             post["conteudo"] = form.get("conteudo")
