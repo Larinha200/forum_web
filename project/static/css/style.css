@@ -1,148 +1,169 @@
-/* RESET */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* BODY */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ffe4ec, #ffd6e7);
-    color: #333;
-    padding: 40px 20px;
+    background: linear-gradient(135deg, #fff0f6, #ffe4ec, #ffd6e7);
+    min-height: 100vh;
+    padding: 40px;
+    color: #4a2c3a;
 }
 
-/* CONTAINER (ALINHA TUDO IGUAL) */
+/* CONTAINER */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 10px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-/* BOTÃO CRIAR (ALINHADO COM CARD) */
-.criar {
-    display: inline-block;
+/* TITULOS */
+h1 {
+    text-align: center;
+    color: #d63384;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, #ff4d8d, #e60073);
-    color: white;
+    font-size: 42px;
     font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(230, 0, 115, 0.3);
-    transition: 0.3s;
-}
-
-.criar:hover {
-    background: linear-gradient(135deg, #e60073, #cc005f);
-}
-
-/* CARD (AGORA ALINHADO COM BOTÃO) */
-.card {
-    background: #fff0f6;
-    border: 1px solid #ffc2d1;
-    border-radius: 16px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 10px rgba(214, 51, 132, 0.1);
-}
-
-/* TITULO */
-.card h2 {
-    font-size: 26px;
-    margin-bottom: 15px;
-    color: #c2185b;
-}
-
-/* TEXTO */
-.card p {
-    margin-bottom: 8px;
-    font-size: 16px;
-}
-
-/* AUTOR */
-.card span {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 13px;
-    color: #777;
-}
-
-/* AÇÕES (BOTÕES RETOS E ALINHADOS) */
-.actions {
-    display: flex;
-    gap: 12px;
-}
-
-/* REMOVE BUG DO FORM DELETE */
-.delete-form {
-    margin: 0;
+    text-shadow: 0 2px 10px rgba(214, 51, 132, 0.2);
 }
 
 /* BOTÕES */
 .btn,
 button {
-    padding: 10px 18px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
+    display: inline-block;
     text-decoration: none;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 15px;
+}
+
+.criar {
+    background: linear-gradient(135deg, #ff4d94, #ff80ab);
     color: white;
-    font-size: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(255, 77, 148, 0.3);
+}
+
+.editar {
+    background: linear-gradient(135deg, #ff80ab, #ff99c8);
+    color: white;
+}
+
+.excluir {
+    background: linear-gradient(135deg, #e91e63, #ff4081);
+    color: white;
+}
+
+.btn:hover,
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(214, 51, 132, 0.25);
+}
+
+/* CARDS */
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.12);
     transition: 0.3s;
 }
 
-/* EDITAR */
-.editar {
-    background: #ff4d8d;
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(255, 105, 180, 0.18);
 }
 
-.editar:hover {
-    background: #e60073;
+.card h2 {
+    color: #c2185b;
+    margin-bottom: 10px;
+    font-size: 28px;
 }
 
-/* EXCLUIR */
-.excluir {
-    background: #cc0052;
+.card p {
+    color: #6d4c5b;
+    margin-bottom: 12px;
+    line-height: 1.5;
 }
 
-.excluir:hover {
-    background: #99003d;
+.card span {
+    display: block;
+    color: #ad1457;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* AÇÕES */
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.delete-form {
+    display: inline;
 }
 
 /* FORMULÁRIOS */
 form {
-    background: #fff0f6;
-    padding: 25px;
-    border-radius: 16px;
-    max-width: 400px;
-    margin: 30px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    border: 1px solid #ffc2d1;
+    max-width: 500px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.15);
+    backdrop-filter: blur(10px);
 }
 
-/* INPUTS */
 input {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ffb3c6;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 2px solid #ffc1d6;
+    border-radius: 12px;
     outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+    background: #fff9fb;
 }
 
 input:focus {
-    border-color: #ff4d8d;
-    box-shadow: 0 0 5px rgba(255, 77, 141, 0.5);
+    border-color: #ff4d94;
+    box-shadow: 0 0 10px rgba(255, 77, 148, 0.2);
 }
 
 /* BOTÃO FORM */
 form button {
-    margin-top: 10px;
-    background: #ff4d8d;
+    width: 100%;
+    background: linear-gradient(135deg, #ff4d94, #ff80ab);
+    color: white;
+    font-size: 16px;
 }
 
-form button:hover {
-    background: #e60073;
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
