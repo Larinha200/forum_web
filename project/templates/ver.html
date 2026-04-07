@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <a href="/" class="btn criar">⬅ Voltar</a>
+
+    <div class="card">
+        <h2>{{ posts.titulo }}</h2>
+        <p> {{ posts.resumo }}</p>
+        <p> {{ posts.conteudo }}</p>
+        <span>{{ posts.autor }}</span>
+
+        
+    </div>
+
+</div>
+
+</body>
+</html>

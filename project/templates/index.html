@@ -11,16 +11,17 @@
 <body>
 
 <div class="container">
-
+    
     <a href="/create" class="btn criar">Criar Post</a>
 
     {% for post in posts %}
     <div class="card">
         <h2>{{ post.titulo }}</h2>
-        <p>{{ post.resumo }}</p>
+        <p>{{ post.conteudo }}</p>
         <span>{{ post.autor }}</span>
 
         <div class="actions">
+            <a href="/post/{{ post.id }}" >ver</a>
             <a href="/edit/{{ post.id }}" class="btn editar">Editar</a>
 
             <form action="/delete/{{ post.id }}" method="post" class="delete-form">

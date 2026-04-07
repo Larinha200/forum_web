@@ -40,10 +40,10 @@ async def read_item(request: Request, id: int):
             break
 
     return templates.TemplateResponse(
-        request=request,
-        name="index.html",
-       context={"post": post_encontrado}
-    )
+    request=request,
+    name="ver.html",
+    context={"post": [post_encontrado]}
+)
 
 @app.get("/create", response_class=HTMLResponse)
 async def create_page(request: Request):
