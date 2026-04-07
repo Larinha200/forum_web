@@ -1,0 +1,60 @@
+*{
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 600px;
+    margin: 30px auto;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h1 {
+    margin: 0;
+}
+
+.card span {
+    display: block;
+    margin-top: 10px;
+    color: gray;
+}
+
+.actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.criar {
+    background-color: green;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.editar {
+    background-color: blue;
+}
+
+.excluir {
+    background-color: red;
+}

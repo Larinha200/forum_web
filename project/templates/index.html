@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Posts</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="/create" class="btn criar">Criar Post</a>
+
+    {% for post in posts %}
+    <div class="card">
+        <h1>{{ post.titulo }}</h1>
+        <p>{{ post.resumo }}</p>
+        <span>{{ post.autor }}</span>
+
+        <div class="actions">
+            <a href="/edit/{{ post.id }}" class="btn editar">Editar</a>
+
+            <form action="/delete/{{ post.id }}" method="post">
+                <button type="submit" class="btn excluir">Excluir</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
