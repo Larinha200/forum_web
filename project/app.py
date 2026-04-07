@@ -42,7 +42,7 @@ async def read_item(request: Request, id: int):
     return templates.TemplateResponse(
         request=request,
         name="index.html",
-       context={"posts": [post_encontrado]}
+       context={"post": [post_encontrado]}
     )
 
 @app.get("/create", response_class=HTMLResponse)
@@ -81,7 +81,7 @@ async def create_page(request: Request, id:int):
     return templates.TemplateResponse(
         request=request,
         name="editar_post.html",
-       context={"posts": [post_encontrado]}
+       context={"post": [post_encontrado]}
     )
 
 @app.post("/edit/{id}")
@@ -98,8 +98,7 @@ async def edit_post(request: Request, id: int):
             break
 
     return RedirectResponse(url="/", status_code=303)
-
-
+    
 @app.post("/delete/{id}")
 async def delete_post(request: Request, id: int):
 
