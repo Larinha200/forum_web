@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
 }
 
 /* BODY */
@@ -11,82 +10,154 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #ffe4ec, #ffd6e7);
     color: #333;
-    padding: 20px;
-}
-
-/* TITULOS */
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #d63384;
+    padding: 40px 20px;
 }
 
 /* CONTAINER */
 .container {
     max-width: 800px;
     margin: auto;
+    padding: 10px;
 }
 
-/* CARD (posts) */
+/* TITULO PRINCIPAL */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d63384;
+}
+
+/* BOTÃO CRIAR */
+.criar {
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    background: linear-gradient(135deg, #ff4d8d, #e60073);
+    color: white;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(230, 0, 115, 0.3);
+    transition: 0.3s;
+}
+
+.criar:hover {
+    background: linear-gradient(135deg, #e60073, #cc005f);
+}
+
+/* CARD */
 .card {
     background: #fff0f6;
     border: 1px solid #ffc2d1;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 15px;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
     box-shadow: 0 4px 10px rgba(214, 51, 132, 0.1);
 }
 
-.card h1 {
-    font-size: 20px;
+/* TITULO DO POST */
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
     color: #c2185b;
 }
 
+/* TEXTO */
 .card p {
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
+/* AUTOR */
 .card span {
-    font-size: 12px;
-    color: #888;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #777;
 }
 
 /* AÇÕES */
-/* AÇÕES (corrigido) */
 .actions {
     margin-top: 15px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
-/* FORM DE EXCLUIR */
+/* FORM DELETE (CORRIGIDO SEM QUEBRAR LAYOUT) */
 .delete-form {
+    background: transparent;
+    border: none;
+    padding: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
 }
 
-/* BOTÕES PADRÃO */
-.btn {
+/* BOTÕES GERAIS */
+.btn, button {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 10px 16px;
     border-radius: 8px;
-    text-decoration: none;
-    color: white;
     border: none;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
     font-size: 14px;
+    transition: 0.3s;
 }
 
-/* ESPECÍFICOS */
+/* EDITAR */
 .editar {
     background: #ff4d8d;
 }
 
+.editar:hover {
+    background: #e60073;
+}
+
+/* EXCLUIR */
 .excluir {
     background: #cc0052;
 }
 
-/* REMOVE TAMANHO ESTRANHO */
-button {
-    width: auto;
+.excluir:hover {
+    background: #99003d;
+}
+
+/* FORMULÁRIOS (create/edit) */
+form {
+    background: #fff0f6;
+    padding: 25px;
+    border-radius: 16px;
+    max-width: 400px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid #ffc2d1;
+}
+
+/* INPUTS */
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ffb3c6;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #ff4d8d;
+    box-shadow: 0 0 5px rgba(255, 77, 141, 0.5);
+}
+
+/* BOTÃO FORM */
+form button {
+    margin-top: 10px;
+    background: #ff4d8d;
+}
+
+form button:hover {
+    background: #e60073;
 }
